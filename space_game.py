@@ -5,7 +5,6 @@
 
 
 # import modules
-import display_menu
 import random
 import sys
 import os
@@ -31,7 +30,7 @@ import events
 # import help
 # import settings
 # import credits
-# import player
+import player
 
 # some functions
 def display_menu():
@@ -59,6 +58,12 @@ def display_menu():
     else:
         print("Invalid choice. Try again.")
         display_menu()
+def new_game():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Starting a new game...")
+    player.Player_stats.create_player("Boris")
+
+
 
 
 
@@ -76,24 +81,6 @@ def display_menu():
 # print("There are " + str(len(events.random_events)) + " events in this universe.")
 # print("There are " + str(len(races.races)) + " races in this universe.")
 
-# def game_loop():
-    # game loop
-    # while True:
-        # update_space()
-        # update_combat()
-        # update_diplomacy()
-        # update_trade()
-        # update_travel()
-        # update_economy()
-        # update_politics()
-        # update_missions()
-        # update_events()
-        # update_factories()
-        # update_pirates()
-        # update save()
-        # update_player()
-        # display_menu()
-        # pass
 
 def game_loop():
     # game loop
