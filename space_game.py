@@ -1,7 +1,6 @@
 # this is a text-based game where players are space traders
 # and must travel between planets buying and selling goods
-# to make a profit. The game ends when the player has no more
-# money or when the player has visited every planet.
+# to make a profit. 
 
 # there are pirates
 # players can build a ships, and upgrade the ship
@@ -29,7 +28,7 @@ import pirates
 import organizations
 # import aliens
 import missions
-# import events
+import events
 # import combat
 # import diplomacy
 # import trade
@@ -46,11 +45,6 @@ import missions
 os.system('cls' if os.name == 'nt' else 'clear')
 
 
-# we will use an external file for goods to trade, their base price, and description
-# we will use an external file for planets and their descriptions
-# we will use an external file for upgrades and their descriptions
-# we will use an external file for ships and their descriptions
-# we will use an external file for space stations and their descriptions
 
 print("There are " + str(len(planets.planets)) + " planets in this universe.")
 print("There are " + str(len(goods.goods)) + " goods in this universe.")
