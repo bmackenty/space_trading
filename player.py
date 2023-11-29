@@ -21,18 +21,6 @@ class Player_stats:
         self.race = None
         self.crew = []
         self.affiliations = []
-
-    def new_player(self):
-
-        # create a new player with ID based on timestamp.
-        now = datetime.datetime.now()
-        player_id = now.strftime("%Y%m%d%H%M%S")
-
-        # create a new player
-        new_player = Player_stats(player_id)
-        print("Starting a new game...")
-        new_player.name = input("What is your name? ")
-        print(f"Welcome, {new_player.name}!")
         
     def greet(self):
         print(f"Hello, {self.name}!")

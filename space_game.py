@@ -36,34 +36,52 @@ from player import *
 def display_menu():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Welcome to Space Trader!")
-    print("1. Start New Game")
-    print("2. Load Game")
-    print("3. Help")
-    print("4. Settings")
-    print("5. Credits")
-    print("6. Quit")
+    print("1. Create new character")
+    print("2. Start new game")
+    print("3. Load Game")
+    print("4. Help")
+    print("5. Settings")
+    print("6. Credits")
+    print("7. Quit")
     choice = input("Enter your choice: ")
     if choice == "1":
-        new_game()
+        new_character()
     elif choice == "2":
-        load_game()
+        new_game()
     elif choice == "3":
-        help()
+        load_game()
     elif choice == "4":
-        settings()
+        help()
     elif choice == "5":
-        credits()
+        settings()
     elif choice == "6":
+        credits()
+    elif choice == "7":
         sys.exit()
     else:
         print("Invalid choice. Try again.")
         display_menu()
+
+def new_character():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("Generating new character...")
+    current_player = Player_stats("Boris")
+    Player_stats.greet(current_player)
+    press_enter = input("Press enter to continue.")
+    
 def new_game():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("Starting a new game...")
-    Player_stats.new_player("new_player")
-    Player_stats.greet("new_player")
-    press_enter = input("Press enter to continue...")
+    print("Starting new game...")
+    press_enter = input("Press enter to continue.")
+    print("=" * 80)
+    print("Welcome to Space Trader!")
+    print("=" * 80)
+    print()
+    print()
+    print("Name: " + current_player.name)
+
+    press_enter = input("Press enter to continue.")
+
 
 
 
