@@ -1,5 +1,111 @@
 # this file should contain a list of goods, their base price, and a description
 # the goods should be science fiction goods
+
+good_categories = {
+    "Raw_Materials": {
+        "Examples": ["Iron Ore", "Hydrogen Fuel", "Titanium"],
+        "Common Uses": ["Manufacturing", "Fuel", "Construction"],
+        "Special Notes": "Widely available but low profit margins."
+    },
+    "Manufactured_Goods": {
+        "Examples": ["Spacecraft Parts", "Electronics", "Machinery"],
+        "Common Uses": ["Repairs", "Upgrades", "Industrial"],
+        "Special Notes": "Requires industrial facilities to produce."
+    },
+    "Luxury_Items": {
+        "Examples": ["Fine Art", "Rare Wines", "Jewelry"],
+        "Common Uses": ["Trade with affluent clients", "Gifts"],
+        "Special Notes": "High value but market volatility is common."
+    },
+    "Technological_Items": {
+        "Examples": ["Quantum Chips", "AI Cores", "Advanced Sensors"],
+        "Common Uses": ["Tech upgrades", "Research"],
+        "Special Notes": "High demand in technologically advanced regions."
+    },
+    "Foodstuffs": {
+        "Examples": ["Synthetic Meat", "Hydroponic Vegetables", "Nutrient Packs"],
+        "Common Uses": ["Consumption", "Agriculture"]
+    },
+        "Medicinal_Products": {
+        "Examples": ["Pharmaceuticals", "Medical Equipment", "Biotech Implants"],
+        "Common Uses": ["Healthcare", "Life Support", "Enhancements"],
+        "Special Notes": "Steady demand, but regulations vary significantly by region."
+    },
+    "Energy_Sources": {
+        "Examples": ["Fusion Cells", "Antimatter Containers", "Solar Panels"],
+        "Common Uses": ["Power Generation", "Ship Fuel", "Industrial Energy"],
+        "Special Notes": "Essential for all space activities, constant demand."
+    },
+    "Cultural_Artifacts": {
+        "Examples": ["Ancient Relics", "Artistic Works", "Historical Documents"],
+        "Common Uses": ["Museums", "Collectors", "Academic Study"],
+        "Special Notes": "Niche market, potentially high value but with legal complexities."
+    },
+    "Research_Materials": {
+        "Examples": ["Exotic Matter", "Genetic Samples", "Archaeological Finds"],
+        "Common Uses": ["Scientific Research", "Experimental Tech"],
+        "Special Notes": "Highly specialized and often subject to strict regulations."
+    },
+    "Illegal_Goods": {
+        "Examples": ["Narcotics", "Contraband Tech", "Smuggled Artifacts"],
+        "Common Uses": ["Black Market", "Underworld Deals"],
+        "Special Notes": "High risk and reward, illegal in many jurisdictions."
+    },
+    "Military_Equipment": {
+        "Examples": ["Laser Cannons", "Shield Generators", "Combat Drones"],
+        "Common Uses": ["Arming Ships", "Planetary Defense", "Mercenary Activities"],
+        "Special Notes": "High demand in conflict zones, but sale may be restricted."
+    },
+    "Construction_Materials": {
+        "Examples": ["Composite Alloys", "Nano-Cement", "Self-Assembling Scaffoldings"],
+        "Common Uses": ["Building Space Stations", "Habitat Construction", "Infrastructure Projects"],
+        "Special Notes": "Steady demand in expanding colonies or reconstruction areas."
+    },
+    "Data_Resources": {
+        "Examples": ["Star Maps", "Encrypted Databases", "Scientific Research"],
+        "Common Uses": ["Navigation", "Information Trading", "Academic Study"],
+        "Special Notes": "Intangible but can be highly valuable; piracy risk."
+    },
+    "Organic_Materials": {
+        "Examples": ["Seeds", "Microbial Cultures", "Genetic Templates"],
+        "Common Uses": ["Terraforming", "Agriculture", "Biotech"],
+        "Special Notes": "Special storage conditions often required."
+    },
+    "Hazardous_Materials": {
+        "Examples": ["Radioactive Isotopes", "Toxic Waste", "Corrosive Chemicals"],
+        "Common Uses": ["Industrial Processes", "Weaponry", "Waste Disposal"],
+        "Special Notes": "Transportation and handling are risky and heavily regulated."
+    },
+    "Communication_Devices": {
+        "Examples": ["Quantum Transceivers", "Holo-Projectors", "Signal Jammers"],
+        "Common Uses": ["Communication", "Media", "Espionage"],
+        "Special Notes": "Varying legality and technical complexity."
+    },
+    "Personal_Items": {
+        "Examples": ["Clothing", "Jewelry", "Entertainment Devices"],
+        "Common Uses": ["Daily Use", "Fashion", "Leisure Activities"],
+        "Special Notes": "Broad market appeal, trends can fluctuate rapidly."
+    },
+    "Transport_Vehicles": {
+        "Examples": ["Shuttlecraft", "Cargo Haulers", "Hoverbikes"],
+        "Common Uses": ["Transportation", "Cargo Movement", "Personal Travel"],
+        "Special Notes": "Requires servicing facilities; registration may be needed."
+    },
+    "Survival_Gear": {
+        "Examples": ["Space Suits", "Oxygen Generators", "Emergency Rations"],
+        "Common Uses": ["Exploration", "Disaster Preparedness", "Colonization"],
+        "Special Notes": "Essential for high-risk environments."
+    },
+    "Artificial_Intelligence": {
+        "Examples": ["Navigational AIs", "Personal Assistants", "Tactical Simulators"],
+        "Common Uses": ["Automation", "Efficiency Improvement", "Training"],
+        "Special Notes": "Ethical and legal considerations in certain jurisdictions."
+    }
+}
+
+
+
+
 goods = {
     "HydrogenFuel": {"Type": "Raw Material", "Value": 10, "Weight": 1, "Quality": "Standard", "Durability": "Stable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
     "QuantumChips": {"Type": "Technology", "Value": 500, "Weight": 0.5, "Quality": "High", "Durability": "Fragile", "Rarity": "Rare", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},

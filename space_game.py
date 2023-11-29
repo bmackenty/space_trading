@@ -48,6 +48,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 
 print("There are " + str(len(planets.planets)) + " planets in this universe.")
 print("There are " + str(len(goods.goods)) + " goods in this universe.")
+print("There are " + str(len(goods.good_categories)) + " good categories in this universe.")
 print("There are " + str(len(ships.ship_classes)) + " ship types in this universe.")
 print("There are " + str(len(stations.space_stations)) + " space station types in this universe.")
 print("There are " + str(len(markets.markets)) + " markets in this universe.")
@@ -55,3 +56,4 @@ print("There are " + str(len(factories.factories)) + " factories in this univers
 print("There are " + str(len(pirates.pirates)) + " pirate in this universe.")
 print("There are " + str(len(organizations.organizations)) + " organizations in this universe.")
 print("There are " + str(len(missions.missions)) + " missions in this universe.")
+print("There are " + str(len(events.random_events)) + " events in this universe.")
