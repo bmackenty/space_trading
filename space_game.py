@@ -30,7 +30,7 @@ import events
 # import help
 # import settings
 # import credits
-import player
+from player import *
 
 # some functions
 def display_menu():
@@ -61,7 +61,9 @@ def display_menu():
 def new_game():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Starting a new game...")
-    player.Player_stats.create_player("Boris")
+    Player_stats.new_player("new_player")
+    Player_stats.greet("new_player")
+    press_enter = input("Press enter to continue...")
 
 
 

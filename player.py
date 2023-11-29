@@ -1,8 +1,10 @@
 # this creates a class for the player
+import datetime
 
 class Player_stats:
-    def __init__(self):
-        self.name = "none"
+    def __init__(self,name):
+        self.name = name
+        self.id = None 
         self.money = 1000
         self.ship = None
         self.cargo = []
@@ -20,9 +22,20 @@ class Player_stats:
         self.crew = []
         self.affiliations = []
 
-    def create_player(self):
-        self.name = input("What is your name? ")
-        print("Welcome, " + self.name + ".")
-        print("You have 1000 credits to start with.")
-        self.money = 1000
+    def new_player(self):
 
+        # create a new player with ID based on timestamp.
+        now = datetime.datetime.now()
+        player_id = now.strftime("%Y%m%d%H%M%S")
+
+        # create a new player
+        new_player = Player_stats(player_id)
+        print("Starting a new game...")
+        new_player.name = input("What is your name? ")
+        print(f"Welcome, {new_player.name}!")
+        
+    def greet(self):
+        print(f"Hello, {self.name}!")
+        print(f"Your ID is {self.id}.")
+        print(f"You have {self.money} credits.")
+        print(f"You have {self.health} health.")
