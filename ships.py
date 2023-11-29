@@ -189,3 +189,58 @@ ship_classes = {
         "AI and Automation Level": "High"
     }
 }
+
+
+ship_upgrades = {
+    "Engine_Upgrades": {
+        "Improved_Thrusters": "Increase speed and agility",
+        "Fuel_Efficiency_Mods": "Reduce fuel consumption"
+    },
+    "Weapon_Systems": {
+        "Laser_Cannons": "Provide more firepower",
+        "Missile_Racks": "Add guided missile capabilities",
+        "Ion_Blasters": "Disable enemy systems"
+    },
+    "Defensive_Systems": {
+        "Enhanced_Shields": "Improve damage absorption",
+        "Armor_Plating": "Increase resistance to physical damage",
+        "ECM_Systems": "Evade enemy targeting systems"
+    },
+    "Cargo_Space": {
+        "Expanded_Hold": "Increase cargo capacity",
+        "Secure_Cargo_Lockers": "Protect valuable goods"
+    },
+    "Navigation_Systems": {
+        "Advanced_Nav_Computer": "Improve jump accuracy and speed",
+        "Long_Range_Scanners": "Detect objects and threats from a greater distance"
+    },
+    "Communication_Equipment": {
+        "Holo_Commuicactors": "Enable long-distance visual communication",
+        "Encryption_Modules": "Secure your communications"
+    },
+    "Life_Support_Systems": {
+        "Oxygen_Recyclers": "Extend life support duration",
+        "Artificial_Gravity_Generators": "Improve comfort for long journeys"
+    },
+    "Crew_Quarters": {
+        "Comfortable_Living_Spaces": "Increase crew morale and efficiency",
+        "Medical_Bay": "Treat injuries and illnesses"
+    },
+    "Specialized_Equipment": {
+        "Mining_Lasers": "Equip your ship for asteroid mining",
+        "Scientific_Labs": "Conduct research and analysis in space",
+        "Cloaking_Device": "Temporarily become invisible to enemies"
+    },
+    "Automation_Systems": {
+        "AI_Assisted_Piloting": "Enhance piloting with artificial intelligence",
+        "Automated_Repair_Drones": "Perform repairs during and after combat"
+    },
+    "Energy_Systems": {
+        "Fusion_Reactors": "Increase energy output for all systems",
+        "Solar_Panels": "Harvest energy from stars for additional power"
+    },
+    "Exploration_Gear": {
+        "Planetary_Probe_Drones": "Gather data from planets",
+        "Deep_Space_Beacons": "Mark locations of interest"
+    }
+}
