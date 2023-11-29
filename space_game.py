@@ -26,7 +26,7 @@ import markets
 import factories
 import pirates
 import organizations
-# import aliens
+import races
 import missions
 import events
 # import combat
@@ -57,3 +57,4 @@ print("There are " + str(len(pirates.pirates)) + " pirate in this universe.")
 print("There are " + str(len(organizations.organizations)) + " organizations in this universe.")
 print("There are " + str(len(missions.missions)) + " missions in this universe.")
 print("There are " + str(len(events.random_events)) + " events in this universe.")
+print("There are " + str(len(races.races)) + " races in this universe.")
