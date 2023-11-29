@@ -187,9 +187,30 @@ ship_classes = {
         "Life Support Systems": "Advanced",
         "Sensor Array": "State-of-the-Art",
         "AI and Automation Level": "High"
+    },
+    "Salvage_Vessel": {
+        "Type": "Resource Recovery and Salvage",
+        "Size": "Large",
+        "Speed": "Slow",
+        "Cargo Capacity": 300,
+        "Crew Capacity": 20,
+        "Weaponry": "Minimal",
+        "Defense Systems": "Medium",
+        "Fuel Efficiency": "Moderate",
+        "Maneuverability": "Low",
+        "Range": "Medium",
+        "Tech Level": "Moderate",
+        "Condition": "Sturdy, with reinforced hull",
+        "Upgrade Capacity": "Moderate",
+        "Stealth Capabilities": "Very Low",
+        "Docking Compatibility": "Adaptable",
+        "Communication Systems": "Standard",
+        "Life Support Systems": "Robust",
+        "Sensor Array": "Enhanced for salvage detection",
+        "AI and Automation Level": "Moderate",
+        "Special Equipment": "Salvage Arms, Recovery Drones, and Cutting Lasers"
     }
 }
-
 
 ship_upgrades = {
     "Engine_Upgrades": {
