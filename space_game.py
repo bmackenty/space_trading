@@ -68,6 +68,7 @@ def new_character():
     current_player = Player_stats("Boris")
     Player_stats.greet(current_player)
     press_enter = input("Press enter to continue.")
+    return current_player
     
 def new_game():
     os.system('cls' if os.name == 'nt' else 'clear')
