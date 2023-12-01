@@ -86,20 +86,24 @@ class GameState:
         self.player = None
         # You can add more attributes here as needed, like:
         # self.current_planet = None
-        # self.game_time = 0
+        self.game_turn = 0
         # self.global_events = []
 
     def set_player(self, player):
         self.player = player
 
     def update_game_state(self):
-        # This method can be expanded to update various aspects of the game state
-        # For example, updating the game time, handling global events, etc.
+        self.game_turn += 1
+        # Update game state here
+
+    def display_game_state(self):
+        print(f"Game Turn: {self.game_turn}")
+
+
         pass
 
     # Additional methods to manage game state can be added here
     # Such as methods to change the current planet, update global events, etc.
-
 
 
 class Main:
@@ -122,7 +126,9 @@ class Main:
         # Display the main menu or game options
         print("1. New Game")
         print("2. Load Game")
-        print("3. Exit")
+        print("3. Show player stats")
+        print("4. update game state")
+        print("6. Exit")
         # Add more menu options as necessary
 
     def process_input(self):
@@ -132,6 +138,12 @@ class Main:
         elif choice == "2":
             self.load_game()
         elif choice == "3":
+            self.game_state.player.display_stats()
+        
+        elif choice == "4":
+            self.game_state.update_game_state()
+            self.game_state.display_game_state()
+        elif choice == "6":
             self.exit_game()
         else:
             print("Invalid choice. Please try again.")
