@@ -6,21 +6,21 @@
 
 
 # import modules
-import random
-import sys
-import os
-import goods
-import planets
-import ships
-import stations
+# import random
+# import sys
+# import os
+# import goods
+# import planets
+# import ships
+# import stations
 # import bases
-import markets
-import factories
-import pirates
-import organizations
-import races
-import missions
-import events
+# import markets
+# import factories
+# import pirates
+# import organizations
+# import races
+# import missions
+# import events
 # import space
 # import combat
 # import diplomacy
@@ -135,6 +135,29 @@ class Ship:
 
     # You can add more methods related to ship functionality like repair, upgrade, travel, etc.
 
+class Planet:
+    def __init__(self, name):
+        self.name=name
+        self.Type=None 
+        self.Size=0
+        self.Population=0
+        self.Government_Type=None
+        self.Economic_Status=None
+        self.Technological_Level=0
+        self.Resource_Abundance=0
+        self.Cultural_Characteristics=None
+        self.Stability=0 
+        self.Climate=0
+        self.Strategic_Importance=0 
+        self.Trade_Regulations=none 
+        self.Black_Market_Activity=0 
+        self.Spaceport_Facilities=0 
+        self.Alliances_and_conflicts=None
+        self.Historical_Significance=0 
+        self.Orbital_Position=0 
+        self.Special_Conditions=None 
+        self.Local_Customs=None
+        self.Location = [100,200,300]
 
 class GameState:
     def __init__(self):
@@ -185,7 +208,7 @@ class Main:
         print("1. New Game")
         print("2. Load Game")
         print("3. Show player stats")
-        print("4. update game state")
+        print("4. Increment game state")
         print("6. Exit")
         # Add more menu options as necessary
 

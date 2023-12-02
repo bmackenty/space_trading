@@ -1,5 +1,27 @@
 planets = {
-    "TerraNova": {"Name": "TerraNova", "Type": "Habitable", "Size": "Medium", "Population": "High", "Government Type": "Democracy", "Economic Status": "Wealthy", "Technological Level": "Advanced", "Resource Abundance": "Moderate", "Cultural Characteristics": "Diverse", "Stability": "Stable", "Climate": "Temperate", "Strategic Importance": "High", "Trade Regulations": "Moderate", "Black Market Activity": "Low", "Spaceport Facilities": "Excellent", "Alliances and Conflicts": "Neutral", "Historical Significance": "High", "Orbital Position": "Inner System", "Special Conditions": "None", "Local Customs": "Varied", "Location": {"X": 100, "Y": 200, "Z": 300}},
+    "TerraNova": {
+        "Name": "TerraNova", 
+        "Type": "Habitable", 
+        "Size": "Medium", 
+        "Population": "High", 
+        "Government Type": "Democracy", 
+        "Economic Status": "Wealthy", 
+        "Technological Level": "Advanced", 
+        "Resource Abundance": "Moderate", 
+        "Cultural Characteristics": "Diverse", 
+        "Stability": "Stable", 
+        "Climate": "Temperate", 
+        "Strategic Importance": "High", 
+        "Trade Regulations": "Moderate", 
+        "Black Market Activity": "Low", 
+        "Spaceport Facilities": "Excellent", 
+        "Alliances and Conflicts": "Neutral",
+        "Historical Significance": "High", 
+        "Orbital Position": "Inner System", 
+        "Special Conditions": "None", 
+        "Local Customs": "Varied", 
+        "Location": {"X": 100, "Y": 200, "Z": 300}
+        },
     "Zypherus": {"Name": "Zypherus", "Type": "Gas Giant", "Size": "Large", "Population": "Low", "Government Type": "Corporate State", "Economic Status": "Developing", "Technological Level": "Medium", "Resource Abundance": "High", "Cultural Characteristics": "Industrial", "Stability": "Volatile", "Climate": "Gas Storms", "Strategic Importance": "Medium", "Trade Regulations": "Low", "Black Market Activity": "High", "Spaceport Facilities": "Basic", "Alliances and Conflicts": "Conflicted", "Historical Significance": "Low", "Orbital Position": "Outer System", "Special Conditions": "Hazardous Atmosphere", "Local Customs": "Strict", "Location": {"X": -500, "Y": 150, "Z": 450}},
     "IcarusV": {
         "Name": "IcarusV",
