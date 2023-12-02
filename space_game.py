@@ -10,7 +10,7 @@
 # import sys
 # import os
 # import goods
-# import planets
+import planets
 # import ships
 # import stations
 # import bases
@@ -136,28 +136,29 @@ class Ship:
     # You can add more methods related to ship functionality like repair, upgrade, travel, etc.
 
 class Planet:
-    def __init__(self, name):
+    def __init__(self, name,location,type,size,population,government_type,economic_status,technological_level,resource_abundance,cultural_characteristics,stability,climate,strategic_importance,trade_regulations,black_market_activity,spaceport_facilities,alliances_and_conflicts,historical_significance,orbital_position,special_conditions,local_customs):
         self.name=name
-        self.Type=None 
-        self.Size=0
-        self.Population=0
-        self.Government_Type=None
-        self.Economic_Status=None
-        self.Technological_Level=0
-        self.Resource_Abundance=0
-        self.Cultural_Characteristics=None
-        self.Stability=0 
-        self.Climate=0
-        self.Strategic_Importance=0 
-        self.Trade_Regulations=none 
-        self.Black_Market_Activity=0 
-        self.Spaceport_Facilities=0 
-        self.Alliances_and_conflicts=None
-        self.Historical_Significance=0 
-        self.Orbital_Position=0 
-        self.Special_Conditions=None 
-        self.Local_Customs=None
-        self.Location = [100,200,300]
+        self.type=type
+        self.size=0
+        self.population=0
+        self.government_type=None
+        self.economic_status=None
+        self.technological_level=0
+        self.resource_abundance=0
+        self.cultural_characteristics=None
+        self.stability=0 
+        self.climate=0
+        self.strategic_importance=0 
+        self.trade_regulations=None 
+        self.black_market_activity=0 
+        self.spaceport_facilities=0 
+        self.alliances_and_conflicts=None
+        self.historical_significance=0 
+        self.orbital_position=0 
+        self.special_conditions=None 
+        self.local_customs=None
+        self.location = location if location else [100, 200, 300]
+
 
 class GameState:
     def __init__(self):
@@ -166,6 +167,8 @@ class GameState:
         # self.current_planet = None
         self.game_turn = 0
         # self.global_events = []
+        self.planets = {}  # To store planet objects
+
 
     def set_player(self, player):
         self.player = player
@@ -173,6 +176,11 @@ class GameState:
     def update_game_state(self):
         self.game_turn += 1
         # Update game state here
+
+    def load_planets(self, planets_data):
+        for name, attributes in planets_data.items():
+            self.planets[name] = Planet(**attributes)
+
 
     def display_game_state(self):
         print(f"Game Turn: {self.game_turn}")
@@ -197,6 +205,11 @@ class Main:
         self.game_state.set_player(Player.create_new_player("Commander Shepard"))
         # new ship:
         self.game_state.player.ship = Ship("Starter Ship", capacity=100, speed=10, health=100, ship_type="Cargo")
+        # load planets:
+        self.game_state.load_planets(planets.planets_data)  # Assuming planets_data is in planets.py
+
+        
+
 
     def game_loop(self):
         while self.running:
