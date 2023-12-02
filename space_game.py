@@ -38,6 +38,7 @@ import events
 class Player:
     def __init__(self, name):
         self.name = name
+        self.ship = Ship("Starter Ship", capacity=100, speed=10, health=100, ship_type="Cargo")
         self.id = None
         self.money = 1000
         self.ship = None
@@ -82,7 +83,7 @@ class Player:
         # Add more stats as needed
 
 class Ship:
-    def __init__(self, name, capacity, speed, health, weapons=[], upgrades=[]):
+    def __init__(self, name, ship_type, capacity, speed, health, weapons=[], upgrades=[]):
         self.name = name
         self.capacity = capacity  # Max cargo the ship can hold
         self.speed = speed        # Determines how fast the ship can travel
@@ -90,7 +91,7 @@ class Ship:
         self.weapons = weapons    # List of weapons the ship has
         self.upgrades = upgrades  # Ship upgrades like shields, engines, etc.
         self.cargo = []           # Current cargo of the ship
-        self.type = None          # Type of ship, e.g. Cargo, Fighter, etc.
+        self.ship_type = None     # Type of ship, e.g. Cargo, Fighter, etc.
         self.crew = []            # List of crew members on the ship
         self.fuel = 100           # Fuel level of the ship
         self.location = None      # Current location of the ship
@@ -152,6 +153,8 @@ class GameState:
 
     def display_game_state(self):
         print(f"Game Turn: {self.game_turn}")
+        print(f"Player: {self.player.name}")
+        print(f"Ship: {self.player.ship.name}")
 
 
         pass
@@ -169,6 +172,8 @@ class Main:
         print("Welcome to Space Trader!")
         # For example, creating a new player or loading game data
         self.game_state.set_player(Player.create_new_player("Commander Shepard"))
+        # new ship:
+        self.game_state.player.ship = Ship("Starter Ship", capacity=100, speed=10, health=100, ship_type="Cargo")
 
     def game_loop(self):
         while self.running:
