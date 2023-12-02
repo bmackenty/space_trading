@@ -81,6 +81,60 @@ class Player:
         print(f"Health: {self.health}")
         # Add more stats as needed
 
+class Ship:
+    def __init__(self, name, capacity, speed, health, weapons=[], upgrades=[]):
+        self.name = name
+        self.capacity = capacity  # Max cargo the ship can hold
+        self.speed = speed        # Determines how fast the ship can travel
+        self.health = health      # Ship's health points
+        self.weapons = weapons    # List of weapons the ship has
+        self.upgrades = upgrades  # Ship upgrades like shields, engines, etc.
+        self.cargo = []           # Current cargo of the ship
+        self.type = None          # Type of ship, e.g. Cargo, Fighter, etc.
+        self.crew = []            # List of crew members on the ship
+        self.fuel = 100           # Fuel level of the ship
+        self.location = None      # Current location of the ship
+        self.destination = None   # Destination of the ship
+        self.traveling = False    # Whether the ship is traveling or not
+        self.docked = False       # Whether the ship is docked or not
+        self.ai_level = 0         # AI level of the ship
+        self.stealth = 0          # Stealth level of the ship
+        self.sensor = 0           # Sensor level of the ship
+        self.comms = 0            # Communication level of the ship
+        self.armor = 0            # Armor level of the ship
+        self.shields = 0          # Shield level of the ship
+        self.manufacturers = []   # List of manufacturers of the ship
+        self.tech_level = 0       # Tech level of the ship
+        self.condition = None     # Condition of the ship
+        
+
+    def add_cargo(self, item):
+        if len(self.cargo) < self.capacity:
+            self.cargo.append(item)
+        else:
+            print("Cargo hold is full!")
+
+    def remove_cargo(self, item):
+        if item in self.cargo:
+            self.cargo.remove(item)
+        else:
+            print("Item not in cargo!")
+
+    def add_weapon(self, weapon):
+        self.weapons.append(weapon)
+
+    def add_upgrade(self, upgrade):
+        self.upgrades.append(upgrade)
+
+    def take_damage(self, amount):
+        self.health -= amount
+        if self.health < 0:
+            self.health = 0
+            print("Ship is destroyed!")
+
+    # You can add more methods related to ship functionality like repair, upgrade, travel, etc.
+
+
 class GameState:
     def __init__(self):
         self.player = None
@@ -104,7 +158,6 @@ class GameState:
 
     # Additional methods to manage game state can be added here
     # Such as methods to change the current planet, update global events, etc.
-
 
 class Main:
     def __init__(self):
