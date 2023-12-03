@@ -100,8 +100,92 @@ good_categories = {
         "Examples": ["Navigational AIs", "Personal Assistants", "Tactical Simulators"],
         "Common Uses": ["Automation", "Efficiency Improvement", "Training"],
         "Special Notes": "Ethical and legal considerations in certain jurisdictions."
+    },
+    "Exploration_Equipment": {
+        "Examples": ["Deep Space Probes", "Planetary Rovers", "Astronomical Telescopes"],
+        "Common Uses": ["Space Exploration", "Scientific Research", "Astrobiology Studies"],
+        "Special Notes": "Highly advanced technology, often requires collaboration with research institutions."
+    },
+    "Virtual_Realities": {
+        "Examples": ["Immersive Simulations", "Virtual Worlds", "Augmented Reality Devices"],
+        "Common Uses": ["Entertainment", "Training", "Therapeutic Applications"],
+        "Special Notes": "Rapidly evolving field with diverse applications, from leisure to professional training."
+    },
+    "Environmental_Technology": {
+        "Examples": ["Climate Control Systems", "Eco-Friendly Materials", "Sustainable Energy Solutions"],
+        "Common Uses": ["Habitat Management", "Eco-Preservation", "Energy Efficiency"],
+        "Special Notes": "Growing demand in light of environmental concerns and sustainability goals."
+    },
+    "Security_Systems": {
+        "Examples": ["Surveillance Drones", "Encryption Software", "Automated Defense Platforms"],
+        "Common Uses": ["Asset Protection", "Information Security", "Public Safety"],
+        "Special Notes": "Highly sensitive market, often requires clearance and compliance with legal standards."
+    },
+    "Recreational_Goods": {
+        "Examples": ["Holographic Games", "Zero-G Sports Equipment", "Leisure Craft"],
+        "Common Uses": ["Leisure", "Sport", "Recreation"],
+        "Special Notes": "Trends can be highly variable, influenced by cultural shifts and technological innovations."
+    },
+    "Bioengineering_Products": {
+        "Examples": ["Custom Organisms", "Genetic Modification Kits", "Ecosystem Simulators"],
+        "Common Uses": ["Biological Research", "Agriculture", "Medical Applications"],
+        "Special Notes": "Ethical considerations and regulatory compliance are significant factors."
+    },
+    "Dimensional_Artifacts": {
+        "Examples": ["Time-Folded Crystals", "Interdimensional Gateways", "Quantum Entanglement Devices"],
+        "Common Uses": ["Experimental Physics", "Advanced Communication", "Space-Time Research"],
+        "Special Notes": "Extremely rare and often poorly understood; handle with utmost caution."
+    },
+    "Crypto_Biological_Samples": {
+        "Examples": ["Alien Flora Seeds", "Mythical Creature DNA", "Sentient Fungi Spores"],
+        "Common Uses": ["Xenobiology", "Genetic Engineering", "Pharmaceutical Development"],
+        "Special Notes": "Potential for unknown effects; strict containment protocols advised."
+    },
+    "Psionic_Technology": {
+        "Examples": ["Telepathy Amplifiers", "Mind-Control Helmets", "Emotion Detectors"],
+        "Common Uses": ["Mental Health", "Interrogation", "Espionage"],
+        "Special Notes": "Ethical and moral implications; regulated in most advanced civilizations."
+    },
+    "Cosmic_Rarities": {
+        "Examples": ["Star Core Fragments", "Nebula Gas Samples", "Black Hole Photons"],
+        "Common Uses": ["Astrophysics Research", "High-Energy Experiments", "Cosmological Studies"],
+        "Special Notes": "Incredibly scarce and difficult to acquire; often priceless."
+    },
+    "Mythos_Artifacts": {
+        "Examples": ["Ancient Runestones", "Cursed Relics", "Lost Civilization Technology"],
+        "Common Uses": ["Archeology", "Occult Studies", "Cultural Preservation"],
+        "Special Notes": "May carry historical significance and unexplained powers; handle with reverence."
+    },
+    "Quantum_Constructs": {
+        "Examples": ["Holographic Memory Orbs", "Quantum State Manipulators", "Dimensional Bridges"],
+        "Common Uses": ["Data Storage", "Reality Engineering", "Transdimensional Travel"],
+        "Special Notes": "Highly advanced and often requires quantum computing resources to operate."
+    },
+    "Nano_Engineered_Materials": {
+        "Examples": ["Self-Repairing Metals", "Programmable Liquid Alloys", "Nano-Assemblers"],
+        "Common Uses": ["Construction", "Manufacturing", "Medical Applications"],
+        "Special Notes": "Versatile and adaptive, but requires sophisticated control systems."
+    },
+    "Galactic_Mapping_Tools": {
+        "Examples": ["Wormhole Navigators", "Star Cluster Mappers", "Cosmic Anomaly Detectors"],
+        "Common Uses": ["Exploration", "Astrogation", "Research"],
+        "Special Notes": "Essential for safe and efficient interstellar travel."
+    },
+    "Synthetic_Life_Forms": {
+        "Examples": ["Artificial Intelligence Beings", "Bioengineered Companions", "Customized Avatars"],
+        "Common Uses": ["Assistance", "Companionship", "Role Fulfillment"],
+        "Special Notes": "Ethical considerations are paramount; some jurisdictions have strict regulations."
+    },
+    "Temporal_Manipulation_Devices": {
+        "Examples": ["Time Dilation Modules", "Chronal Stabilizers", "Temporal Communicators"],
+        "Common Uses": ["Experimental Physics", "Time-Shifted Operations", "Historical Research"],
+        "Special Notes": "Use is controversial and potentially dangerous; often restricted by temporal accords."
     }
 }
+
+
+
+
 
 
 
