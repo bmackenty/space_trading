@@ -278,4 +278,3 @@ planets_data = {
     }
 }
 
-
