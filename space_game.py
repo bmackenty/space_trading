@@ -159,7 +159,6 @@ class Planet:
         self.local_customs=None
         self.location = location if location else [100, 200, 300]
 
-
 class GameState:
     def __init__(self):
         self.player = None
