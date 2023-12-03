@@ -7,9 +7,9 @@
 
 # import modules
 import random
-import sys
-import os
-import goods
+# import sys
+# import os
+# import goods
 import planets
 # import ships
 # import stations
@@ -184,6 +184,12 @@ class GameState:
 
     def display_game_state(self):
         print(f"Game Turn: {self.game_turn}")
+        print(f"Player: {self.player.name}")
+        print(f"Ship: {self.player.ship.name}")
+
+        #randomly select a planet:
+        planet = random.choice(list(self.planets.values()))
+        print(f"Planet: {planet.name}")
 
 
         pass
