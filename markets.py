@@ -1,4 +1,4 @@
-markets = {
+markets_data = {
     "Galactic_Trade_Bazaar": {
         "Name": "Galactic Trade Bazaar",
         "Location": "Space Station Alpha",

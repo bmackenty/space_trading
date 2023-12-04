@@ -14,7 +14,7 @@ import planets
 # import ships
 # import stations
 # import bases
-# import markets
+import markets
 # import factories
 # import pirates
 import organizations
@@ -82,6 +82,12 @@ class Player:
         print(f"Health: {self.health}")
         # Add more stats as needed
 
+    def check_ship_cargo(self):
+        if self.ship:
+            self.ship.display_cargo()
+        else:
+            print("You do not have a ship.")
+
 class Ship:
     def __init__(self, name, ship_type, capacity, speed, health, weapons=[], upgrades=[]):
         self.name = name
@@ -115,6 +121,8 @@ class Ship:
         else:
             print("Cargo hold is full!")
 
+
+
     def remove_cargo(self, item):
         if item in self.cargo:
             self.cargo.remove(item)
@@ -133,12 +141,24 @@ class Ship:
             self.health = 0
             print("Ship is destroyed!")
 
+    def has_cargo(self):
+        return bool(self.cargo)
+
+    def display_cargo(self):
+        if self.cargo:
+            print(f"{self.name} Cargo:")
+            for item in self.cargo:
+                print(f"- {item}")
+        else:
+            print("Cargo hold is empty.")
+
     # You can add more methods related to ship functionality like repair, upgrade, travel, etc.
 
 class Planet:
-    def __init__(self, name,location,type,size,population,government_type,economic_status,technological_level,resource_abundance,cultural_characteristics,stability,climate,strategic_importance,trade_regulations,black_market_activity,spaceport_facilities,alliances_and_conflicts,historical_significance,orbital_position,special_conditions,local_customs):
+    def __init__(self, name,market, location,type,size,population,government_type,economic_status,technological_level,resource_abundance,cultural_characteristics,stability,climate,strategic_importance,trade_regulations,black_market_activity,spaceport_facilities,alliances_and_conflicts,historical_significance,orbital_position,special_conditions,local_customs):
         self.name=name
         self.type=type
+        self.market = market
         self.size=0
         self.population=0
         self.government_type=None
@@ -159,6 +179,14 @@ class Planet:
         self.local_customs=None
         self.location = location if location else [100, 200, 300]
 
+    def display_market_info(self):
+        if self.market:
+            print(f"Market on {self.name}: {self.market['Name']}")
+            for key, value in self.market.items():
+                print(f"{key}: {value}")
+        else:
+            print("No market on this planet.")
+
 class GameState:
     def __init__(self):
         self.player = None
@@ -176,11 +204,6 @@ class GameState:
         self.game_turn += 1
         # Update game state here
 
-    def load_planets(self, planets_data):
-        for name, attributes in planets_data.items():
-            self.planets[name] = Planet(**attributes)
-
-
     def display_game_state(self):
         print(f"Game Turn: {self.game_turn}")
         print(f"Player: {self.player.name}")
@@ -189,6 +212,7 @@ class GameState:
         #randomly select a planet:
         planet = random.choice(list(self.planets.values()))
         print(f"Planet: {planet.name}")
+        print(f"Market: {planet.market['Name']}")
         
         #randomly select a good category:
         good_category = random.choice(list(goods.good_categories.keys()))
@@ -199,6 +223,12 @@ class GameState:
         print(f"Organization: {organization}")
 
         pass
+
+    def load_planets(self, planets_data, markets_data):
+        for name, attributes in planets_data.items():
+            market_name = random.choice(list(markets_data.keys()))
+            market = markets_data[market_name]
+            self.planets[name] = Planet(**attributes, market=market)
 
     # Additional methods to manage game state can be added here
     # Such as methods to change the current planet, update global events, etc.
@@ -216,9 +246,7 @@ class Main:
         # new ship:
         self.game_state.player.ship = Ship("Starter Ship", capacity=100, speed=10, health=100, ship_type="Cargo")
         # load planets:
-        self.game_state.load_planets(planets.planets_data)  # Assuming planets_data is in planets.py
-
-        
+        self.game_state.load_planets(planets.planets_data, markets.markets_data)  # Assuming planets_data is in planets.py
 
 
     def game_loop(self):
@@ -232,6 +260,7 @@ class Main:
         print("2. Load Game")
         print("3. Show player stats")
         print("4. Increment game state")
+        print("5. Check ship cargo")
         print("6. Exit")
         # Add more menu options as necessary
 
@@ -247,6 +276,9 @@ class Main:
         elif choice == "4":
             self.game_state.update_game_state()
             self.game_state.display_game_state()
+        elif choice == "5":
+            self.game_state.player.check_ship_cargo()
+
         elif choice == "6":
             self.exit_game()
         else:
@@ -270,4 +302,5 @@ class Main:
 if __name__ == "__main__":
     game = Main()
     game.start_game()
+    game.game_state.load_planets(planets.planets_data, markets.markets_data)
     game.game_loop()

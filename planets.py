@@ -277,4 +277,3 @@ planets_data = {
         "location": {"x": -200, "y": 350, "z": 75}
     }
 }
-
