@@ -189,7 +189,10 @@ class GameState:
         #randomly select a planet:
         planet = random.choice(list(self.planets.values()))
         print(f"Planet: {planet.name}")
-
+        
+        #randomly select a good category:
+        good_category = random.choice(list(goods.good_categories.keys()))
+        print(f"Good Category: {good_category}") 
 
         pass
 
