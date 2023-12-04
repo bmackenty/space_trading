@@ -17,7 +17,7 @@ import planets
 # import markets
 # import factories
 # import pirates
-# import organizations
+import organizations
 # import races
 # import missions
 # import events
@@ -193,6 +193,10 @@ class GameState:
         #randomly select a good category:
         good_category = random.choice(list(goods.good_categories.keys()))
         print(f"Good Category: {good_category}") 
+
+        #randomly select an organization:
+        organization = random.choice(list(organizations.organizations.keys()))
+        print(f"Organization: {organization}")
 
         pass
 
