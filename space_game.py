@@ -9,7 +9,7 @@
 import random
 # import sys
 # import os
-# import goods
+import goods
 import planets
 # import ships
 # import stations
