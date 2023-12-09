@@ -184,33 +184,280 @@ good_categories = {
 }
 
 
-
-
-
-
-
-
-goods = {
-    "HydrogenFuel": {"Type": "Raw Material", "Value": 10, "Weight": 1, "Quality": "Standard", "Durability": "Stable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
-    "QuantumChips": {"Type": "Technology", "Value": 500, "Weight": 0.5, "Quality": "High", "Durability": "Fragile", "Rarity": "Rare", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
-    "LuxuryFoods": {"Type": "Foodstuffs", "Value": 100, "Weight": 2, "Quality": "Luxury", "Durability": "Perishable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "Medium", "Cultural Value": "High", "Expiration": "Short"},
-    "AlienArtifacts": {"Type": "Cultural", "Value": 1000, "Weight": 3, "Quality": "Varied", "Durability": "Durable", "Rarity": "Rare", "Legal Status": "Illegal", "Production Requirements": "N/A", "Technological Level": "Unknown", "Cultural Value": "Very High", "Expiration": "None"},
-    "MedicalSupplies": {"Type": "Medicinal", "Value": 200, "Weight": 1.5, "Quality": "High", "Durability": "Stable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "Moderate"},
-    "MilitaryHardware": {"Type": "Technology", "Value": 1000, "Weight": 5, "Quality": "High", "Durability": "Stable", "Rarity": "Rare", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
-    "StellarMaps": {"Type": "Information", "Value": 300, "Weight": 0, "Quality": "High", "Durability": "N/A", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Specialized", "Technological Level": "Medium", "Cultural Value": "Medium", "Expiration": "None"},
-    "RobotParts": {"Type": "Manufactured Goods", "Value": 150, "Weight": 5, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
-    "BioGel": {"Type": "Medicinal", "Value": 250, "Weight": 2, "Quality": "High", "Durability": "Stable", "Rarity": "Uncommon", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "Long"},
-    "ExoticSpices": {"Type": "Luxury Items", "Value": 400, "Weight": 1, "Quality": "Luxury", "Durability": "Perishable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "High", "Expiration": "Moderate"},
-    "NanoFibers": {"Type": "Technology", "Value": 600, "Weight": 0.2, "Quality": "High", "Durability": "Fragile", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "High-tech", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "None"},
-    "AncientManuscripts": {"Type": "Cultural", "Value": 800, "Weight": 3, "Quality": "Varied", "Durability": "Fragile", "Rarity": "Very Rare", "Legal Status": "Legal", "Production Requirements": "N/A", "Technological Level": "N/A", "Cultural Value": "Very High", "Expiration": "None"},
-    "RareMetals": {"Type": "Raw Material", "Value": 200, "Weight": 5, "Quality": "Standard", "Durability": "Stable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
-    "PreciousMetals": {"Type": "Raw Material", "Value": 300, "Weight": 5, "Quality": "Standard", "Durability": "Stable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
-    "DarkMatterSamples": {"Type": "Research Material", "Value": 1000, "Weight": 0.1, "Quality": "High", "Durability": "Stable", "Rarity": "Extremely Rare", "Legal Status": "Restricted", "Production Requirements": "Advanced", "Technological Level": "Very High", "Cultural Value": "Low", "Expiration": "None"},
-    "CyberneticImplants": {"Type": "Technology", "Value": 450, "Weight": 2, "Quality": "High", "Durability": "Durable", "Rarity": "Uncommon", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "None"},
-    "PlasmaCoils": {"Type": "Technology", "Value": 350, "Weight": 4, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
-    "CryogenicContainers": {"Type": "Manufactured Goods", "Value": 200, "Weight": 6, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
-    "StarSteel": {"Type": "Manufactured Goods", "Value": 150, "Weight": 5, "Quality": "High", "Durability": "Durable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Advanced", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
-    "CryoHerbs": {"Type": "Medicinal", "Value": 300, "Weight": 0.2, "Quality": "Premium", "Durability": "Perishable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Specific", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "Short"},
-    "HoloProjectors": {"Type": "Technology", "Value": 450, "Weight": 1.2, "Quality": "Standard", "Durability": "Moderate", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "None"},
-    "NeutroniumOre": {"Type": "Raw Material", "Value": 800, "Weight": 10, "Quality": "Raw", "Durability": "Stable", "Rarity": "Very Rare", "Legal Status": "Restricted", "Production Requirements": "Extreme", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "None"}
+raw_materials_goods = {
+    "Iron Ore": {
+        "Common Uses": "Manufacturing",
+        "Special Notes": "Essential for steel production, widely available."
+    },
+    "Hydrogen Fuel": {
+        "Common Uses": "Fuel",
+        "Special Notes": "Primary fuel source for many spacecraft, high demand."
+    },
+    "Titanium": {
+        "Common Uses": "Construction",
+        "Special Notes": "Strong and lightweight, used in advanced building projects."
+    },
+    "Copper": {
+        "Common Uses": "Electronics",
+        "Special Notes": "Critical in electrical equipment, moderately abundant."
+    },
+    "Silica": {
+        "Common Uses": "Manufacturing",
+        "Special Notes": "Used in producing glass and silicon chips."
+    },
+    "Helium-3": {
+        "Common Uses": "Fuel",
+        "Special Notes": "Rare, used in fusion reactors, high profit margins."
+    },
+    "Aluminum": {
+        "Common Uses": "Manufacturing",
+        "Special Notes": "Used in a wide range of industries, easily recyclable."
+    },
+    "Platinum": {
+        "Common Uses": "Catalysts",
+        "Special Notes": "Rare and valuable, used in various high-tech applications."
+    },
+    "Lithium": {
+        "Common Uses": "Batteries",
+        "Special Notes": "Key component in rechargeable batteries, increasing demand."
+    },
+    "Uranium": {
+        "Common Uses": "Energy",
+        "Special Notes": "Used in nuclear reactors, highly regulated."
+    },
+    "Quantum Crystals": {
+        "Common Uses": "Quantum Computing",
+        "Special Notes": "Extremely rare, used in advanced quantum processors."
+    },
+    "Neutronium": {
+        "Common Uses": "Starship Hulls",
+        "Special Notes": "Incredibly dense material, ideal for constructing spacecraft hulls."
+    },
+    "Dark Matter": {
+        "Common Uses": "Energy",
+        "Special Notes": "Highly speculative and valuable, used in experimental energy systems."
+    },
+    "Exotic Matter": {
+        "Common Uses": "Warp Drives",
+        "Special Notes": "Required for FTL travel, only obtainable in certain regions of space."
+    },
+    "Nanotubes": {
+        "Common Uses": "Construction",
+        "Special Notes": "Stronger than steel and lighter than air, used in cutting-edge architecture."
+    },
+    "Antimatter": {
+        "Common Uses": "Power Generation",
+        "Special Notes": "Extremely powerful and efficient energy source, dangerous to handle."
+    },
+    "Bio-Gel": {
+        "Common Uses": "Medical",
+        "Special Notes": "Revolutionary healing compound, accelerates cellular regeneration."
+    },
+    "Photonic Fibers": {
+        "Common Uses": "Electronics",
+        "Special Notes": "Used in ultrafast data transmission cables, more efficient than traditional materials."
+    },
+    "Zero-Point Modules": {
+        "Common Uses": "Power Generation",
+        "Special Notes": "Extracts energy from quantum vacuum fluctuations, very advanced technology."
+    },
+    "Nanite Clusters": {
+        "Common Uses": "Manufacturing",
+        "Special Notes": "Self-replicating nanobots used in automated production lines."
+    }
 }
+
+
+manufactured_goods = {
+    "Spacecraft Parts": {
+        "Common Uses": "Repairs",
+        "Special Notes": "Essential for maintenance and upgrading of various spacecraft."
+    },
+    "Electronics": {
+        "Common Uses": "Upgrades",
+        "Special Notes": "Used in a wide range of tech applications, from computers to advanced sensors."
+    },
+    "Machinery": {
+        "Common Uses": "Industrial",
+        "Special Notes": "Vital for construction and industrial production."
+    },
+    "Quantum Computers": {
+        "Common Uses": "Data Processing",
+        "Special Notes": "Used for advanced computing tasks, crucial for research and navigation systems."
+    },
+    "Fusion Reactors": {
+        "Common Uses": "Energy",
+        "Special Notes": "Provides clean and efficient power for various applications."
+    },
+    "Nanorobotics": {
+        "Common Uses": "Manufacturing",
+        "Special Notes": "Enables precision manufacturing at microscopic levels."
+    },
+    "Holographic Displays": {
+        "Common Uses": "Communication",
+        "Special Notes": "Offers advanced interactive visual communication solutions."
+    },
+    "Force Field Generators": {
+        "Common Uses": "Defense",
+        "Special Notes": "Provides protective barriers for spacecraft and installations."
+    },
+    "Teleportation Devices": {
+        "Common Uses": "Transport",
+        "Special Notes": "Enables instant transportation of goods and personnel."
+    },
+    "Neural Implants": {
+        "Common Uses": "Medical",
+        "Special Notes": "Enhances cognitive abilities and treats various neurological disorders."
+    },
+    "Anti-Gravity Modules": {
+        "Common Uses": "Construction",
+        "Special Notes": "Utilized in building advanced structures and vehicles."
+    },
+    "Photon Cannons": {
+        "Common Uses": "Weaponry",
+        "Special Notes": "High-energy weapons used for both offense and defense in space battles."
+    },
+    "Warp Drive Engines": {
+        "Common Uses": "Space Travel",
+        "Special Notes": "Allows faster-than-light travel, essential for interstellar journeys."
+    },
+    "Artificial Intelligence Cores": {
+        "Common Uses": "Automation",
+        "Special Notes": "Forms the brain of automated systems and robots."
+    },
+    "Bionic Prosthetics": {
+        "Common Uses": "Medical",
+        "Special Notes": "High-tech replacements for lost limbs, enhancing physical capabilities."
+    },
+    "Cloaking Devices": {
+        "Common Uses": "Stealth",
+        "Special Notes": "Advanced technology that renders spacecraft invisible to most sensors."
+    },
+    "Interstellar Comms Arrays": {
+        "Common Uses": "Communication",
+        "Special Notes": "Enables real-time communication across vast interstellar distances."
+    },
+    "Graviton Beam Projectors": {
+        "Common Uses": "Industrial",
+        "Special Notes": "Utilized in space construction, capable of moving large objects with precision."
+    },
+    "Cybernetic AI Enhancements": {
+        "Common Uses": "Upgrades",
+        "Special Notes": "Augments AI capabilities, leading to smarter and more autonomous systems."
+    },
+    "Temporal Navigators": {
+        "Common Uses": "Time Travel",
+        "Special Notes": "Experimental devices allowing for limited manipulation of time."
+    },
+    "Energy Shield Emitter": {
+        "Common Uses": "Defense",
+        "Special Notes": "Creates a protective energy barrier around objects, highly effective against various attacks."
+    },
+    "Synthetic Atmosphere Processors": {
+        "Common Uses": "Terraforming",
+        "Special Notes": "Critical for creating habitable environments on otherwise uninhabitable planets."
+    },
+    "Quantum Encryption Modules": {
+        "Common Uses": "Security",
+        "Special Notes": "Provides unbreakable encryption for communications and data storage."
+    },
+    "Multi-Dimensional Scanners": {
+        "Common Uses": "Exploration",
+        "Special Notes": "Capable of scanning across various dimensions, revealing hidden or cloaked objects."
+    },
+    "Bio-Synthetic Organ Fabricators": {
+        "Common Uses": "Medical",
+        "Special Notes": "Used in medical facilities to create organic replacements for damaged organs."
+    }
+}
+
+luxury_items = {
+    "Fine Art": {
+        "Common Uses": "Trade with affluent clients",
+        "Special Notes": "Includes rare paintings and sculptures, highly prized by collectors."
+    },
+    "Rare Wines": {
+        "Common Uses": "Gifts",
+        "Special Notes": "Aged wines from renowned planets, valued for their exquisite taste."
+    },
+    "Jewelry": {
+        "Common Uses": "Trade with affluent clients",
+        "Special Notes": "Crafted using precious metals and gemstones, popular among the elite."
+    },
+    "Designer Clothing": {
+        "Common Uses": "Fashion",
+        "Special Notes": "High-fashion apparel from famous designers, a symbol of status."
+    },
+    "Exotic Pets": {
+        "Common Uses": "Companionship",
+        "Special Notes": "Rare and unique creatures from across the galaxy, sought after by exotic pet enthusiasts."
+    },
+    "Luxury Yachts": {
+        "Common Uses": "Leisure",
+        "Special Notes": "State-of-the-art spacecraft designed for comfort and style, favored by the wealthy."
+    },
+    "Gourmet Foods": {
+        "Common Uses": "Culinary Delights",
+        "Special Notes": "Includes delicacies from across the universe, highly sought after by epicureans."
+    },
+    "Holographic Art": {
+        "Common Uses": "Decor",
+        "Special Notes": "Futuristic art form that uses holograms to create stunning visual displays."
+    },
+    "Antique Relics": {
+        "Common Uses": "Collectibles",
+        "Special Notes": "Ancient artifacts from extinct civilizations, valuable to historians and collectors."
+    },
+    "Synthetic Diamonds": {
+        "Common Uses": "Jewelry",
+        "Special Notes": "Lab-grown diamonds that are indistinguishable from natural ones, eco-friendly and conflict-free."
+    },
+    "Virtual Reality Experiences": {
+        "Common Uses": "Entertainment",
+        "Special Notes": "Immersive and interactive virtual adventures, tailored for high-end clients."
+    },
+    "Custom Androids": {
+        "Common Uses": "Personal Assistance",
+        "Special Notes": "Bespoke androids designed for companionship and assistance, equipped with advanced AI."
+    },
+    "Nano-Jewelry": {
+        "Common Uses": "Fashion",
+        "Special Notes": "Jewelry embedded with nanotechnology, changing appearance on command."
+    },
+    "Intergalactic Cruise Tickets": {
+        "Common Uses": "Travel",
+        "Special Notes": "Passage aboard luxury space cruises, offering extraordinary cosmic tours."
+    },
+    "Astral Perfumes": {
+        "Common Uses": "Personal Use",
+        "Special Notes": "Rare and exquisite scents crafted from the essences of distant worlds."
+    }
+}
+
+
+
+
+# goods = {
+#     "HydrogenFuel": {"Type": "Raw Material", "Value": 10, "Weight": 1, "Quality": "Standard", "Durability": "Stable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
+#     "QuantumChips": {"Type": "Technology", "Value": 500, "Weight": 0.5, "Quality": "High", "Durability": "Fragile", "Rarity": "Rare", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
+#     "LuxuryFoods": {"Type": "Foodstuffs", "Value": 100, "Weight": 2, "Quality": "Luxury", "Durability": "Perishable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "Medium", "Cultural Value": "High", "Expiration": "Short"},
+#     "AlienArtifacts": {"Type": "Cultural", "Value": 1000, "Weight": 3, "Quality": "Varied", "Durability": "Durable", "Rarity": "Rare", "Legal Status": "Illegal", "Production Requirements": "N/A", "Technological Level": "Unknown", "Cultural Value": "Very High", "Expiration": "None"},
+#     "MedicalSupplies": {"Type": "Medicinal", "Value": 200, "Weight": 1.5, "Quality": "High", "Durability": "Stable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "Moderate"},
+#     "MilitaryHardware": {"Type": "Technology", "Value": 1000, "Weight": 5, "Quality": "High", "Durability": "Stable", "Rarity": "Rare", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
+#     "StellarMaps": {"Type": "Information", "Value": 300, "Weight": 0, "Quality": "High", "Durability": "N/A", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Specialized", "Technological Level": "Medium", "Cultural Value": "Medium", "Expiration": "None"},
+#     "RobotParts": {"Type": "Manufactured Goods", "Value": 150, "Weight": 5, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "High", "Cultural Value": "Low", "Expiration": "None"},
+#     "BioGel": {"Type": "Medicinal", "Value": 250, "Weight": 2, "Quality": "High", "Durability": "Stable", "Rarity": "Uncommon", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "Long"},
+#     "ExoticSpices": {"Type": "Luxury Items", "Value": 400, "Weight": 1, "Quality": "Luxury", "Durability": "Perishable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "High", "Expiration": "Moderate"},
+#     "NanoFibers": {"Type": "Technology", "Value": 600, "Weight": 0.2, "Quality": "High", "Durability": "Fragile", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "High-tech", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "None"},
+#     "AncientManuscripts": {"Type": "Cultural", "Value": 800, "Weight": 3, "Quality": "Varied", "Durability": "Fragile", "Rarity": "Very Rare", "Legal Status": "Legal", "Production Requirements": "N/A", "Technological Level": "N/A", "Cultural Value": "Very High", "Expiration": "None"},
+#     "RareMetals": {"Type": "Raw Material", "Value": 200, "Weight": 5, "Quality": "Standard", "Durability": "Stable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
+#     "PreciousMetals": {"Type": "Raw Material", "Value": 300, "Weight": 5, "Quality": "Standard", "Durability": "Stable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Low", "Cultural Value": "Low", "Expiration": "None"},
+#     "DarkMatterSamples": {"Type": "Research Material", "Value": 1000, "Weight": 0.1, "Quality": "High", "Durability": "Stable", "Rarity": "Extremely Rare", "Legal Status": "Restricted", "Production Requirements": "Advanced", "Technological Level": "Very High", "Cultural Value": "Low", "Expiration": "None"},
+#     "CyberneticImplants": {"Type": "Technology", "Value": 450, "Weight": 2, "Quality": "High", "Durability": "Durable", "Rarity": "Uncommon", "Legal Status": "Restricted", "Production Requirements": "Complex", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "None"},
+#     "PlasmaCoils": {"Type": "Technology", "Value": 350, "Weight": 4, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
+#     "CryogenicContainers": {"Type": "Manufactured Goods", "Value": 200, "Weight": 6, "Quality": "Standard", "Durability": "Durable", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Simple", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
+#     "StarSteel": {"Type": "Manufactured Goods", "Value": 150, "Weight": 5, "Quality": "High", "Durability": "Durable", "Rarity": "Uncommon", "Legal Status": "Legal", "Production Requirements": "Advanced", "Technological Level": "Medium", "Cultural Value": "Low", "Expiration": "None"},
+#     "CryoHerbs": {"Type": "Medicinal", "Value": 300, "Weight": 0.2, "Quality": "Premium", "Durability": "Perishable", "Rarity": "Rare", "Legal Status": "Legal", "Production Requirements": "Specific", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "Short"},
+#     "HoloProjectors": {"Type": "Technology", "Value": 450, "Weight": 1.2, "Quality": "Standard", "Durability": "Moderate", "Rarity": "Common", "Legal Status": "Legal", "Production Requirements": "Moderate", "Technological Level": "High", "Cultural Value": "Medium", "Expiration": "None"},
+#     "NeutroniumOre": {"Type": "Raw Material", "Value": 800, "Weight": 10, "Quality": "Raw", "Durability": "Stable", "Rarity": "Very Rare", "Legal Status": "Restricted", "Production Requirements": "Extreme", "Technological Level": "Advanced", "Cultural Value": "Low", "Expiration": "None"}
+# }

@@ -209,7 +209,30 @@ ship_classes = {
         "Sensor Array": "Enhanced for salvage detection",
         "AI and Automation Level": "Moderate",
         "Special Equipment": "Salvage Arms, Recovery Drones, and Cutting Lasers"
-    }
+    },
+    "Luxury_Ship": {
+    "Type": "VIP Transport and Leisure",
+    "Size": "Medium",
+    "Speed": "High",
+    "Cargo Capacity": 100,  # Luxury ships focus more on comfort than cargo
+    "Crew Capacity": 30,  # Includes staff for luxury services
+    "Weaponry": "Defensive",  # Primarily for protection
+    "Defense Systems": "High",  # Enhanced for VIP safety
+    "Fuel Efficiency": "High",
+    "Maneuverability": "High",
+    "Range": "Long",
+    "Tech Level": "Advanced",
+    "Condition": "Pristine, with luxurious amenities",
+    "Upgrade Capacity": "High",  # Allows for customization and luxury enhancements
+    "Stealth Capabilities": "Moderate",  # Some level of privacy is provided
+    "Docking Compatibility": "Selective",  # Fits at high-end spaceports
+    "Communication Systems": "Advanced",  # Includes secure and high-quality communication options
+    "Life Support Systems": "State-of-the-Art",  # Top-tier life support for comfort and safety
+    "Sensor Array": "Advanced",  # High-quality sensors for navigation and safety
+    "AI and Automation Level": "High",  # Advanced AI for smooth operation and guest interaction
+    "Special Equipment": "Luxury Suites, Entertainment Systems, Holodecks, Gourmet Kitchen"
+}
+
 }
 
 ship_upgrades = {
