@@ -177,7 +177,7 @@ class Planet:
         self.orbital_position=0 
         self.special_conditions=None 
         self.local_customs=None
-        self.location = location if location else [100, 200, 300]
+        self.location = location
 
     def display_market_info(self):
         if self.market:
@@ -213,6 +213,7 @@ class GameState:
         planet = random.choice(list(self.planets.values()))
         print(f"Planet: {planet.name}")
         print(f"Market: {planet.market['Name']}")
+        print(f"Location: {planet.location}")
         
         #randomly select a good category:
         good_category = random.choice(list(goods.good_categories.keys()))
@@ -261,7 +262,8 @@ class Main:
         print("3. Show player stats")
         print("4. Increment game state")
         print("5. Check ship cargo")
-        print("6. Exit")
+        print("6. Show planets")
+        print("7. Exit")
         # Add more menu options as necessary
 
     def process_input(self):
@@ -278,8 +280,15 @@ class Main:
             self.game_state.display_game_state()
         elif choice == "5":
             self.game_state.player.check_ship_cargo()
-
         elif choice == "6":
+            for planet in self.game_state.planets.values():
+                print(planet.name)
+                print(planet.location)
+                
+          
+
+
+        elif choice == "7":
             self.exit_game()
         else:
             print("Invalid choice. Please try again.")
