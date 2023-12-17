@@ -4,8 +4,6 @@
 # resources, diplomacy and relationships.
 
 
-
-# import modules
 import random
 # import sys
 # import os
