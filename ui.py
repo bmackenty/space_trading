@@ -9,16 +9,16 @@ WIDTH, HEIGHT = 1024, 768
 BLACK, WHITE, GREY, GREEN = (0, 0, 0), (255, 255, 255), (192, 192, 192), (0, 255, 0)
 COLUMN_WIDTH, ROW_HEIGHT, BORDER_THICKNESS = 200, 100, 1
 HEADER_HEIGHT = 50  # Height of the header
-HEADER_TEXT = 'Roguelike Game Interface'  # Text to display in the header
+HEADER_TEXT = 'Space Trading Game'  # Text to display in the header
 LEFT_COLUMN_TEXT, RIGHT_COLUMN_TEXT, BOTTOM_ROW_TEXT, MIDDLE_SECTION_TEXT = 'Left Column', 'Right Column', 'Bottom Row', 'Middle Section'
 
 # Set up display
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Roguelike Game Interface')
+pygame.display.set_caption('Space Trading Game')
 
 # Set up the font
 try:
-    font = pygame.font.Font(None, 24)
+    font = pygame.font.Font(None, 14)
 except IOError:
     print("Font not found! Using default font.")
     font = pygame.font.SysFont(None, 24)
