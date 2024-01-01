@@ -1,5 +1,6 @@
 import pygame
 import sys
+import time
 
 # Initialize Pygame
 pygame.init()
@@ -42,6 +43,21 @@ def draw_text(text, x, y):
     text_rect = text_surface.get_rect(center=(x, y))
     screen.blit(text_surface, text_rect)
 
+# Function to update text
+def update_text():
+    global LEFT_COLUMN_TEXT, RIGHT_COLUMN_TEXT, BOTTOM_ROW_TEXT, MIDDLE_SECTION_TEXT
+    # Example of dynamic text update
+    LEFT_COLUMN_TEXT = 'Updated Left Column'
+    RIGHT_COLUMN_TEXT = 'Updated Right Column'
+    BOTTOM_ROW_TEXT = 'Updated Bottom Row'
+    MIDDLE_SECTION_TEXT = 'Updated Middle Section'
+
+
+ # Variables for timing text updates
+last_update_time = time.time()
+update_interval = 5  # update every 5 seconds
+
+
 # Function to draw header
 def draw_header():
     draw_bordered_box(0, 0, WIDTH, HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
@@ -50,9 +66,17 @@ def draw_header():
 # Game loop
 running = True
 while running:
+    current_time = time.time()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+
+
+
+    # Update text periodically
+    if current_time - last_update_time > update_interval:
+        update_text()
+        last_update_time = current_time
 
     screen.fill(BLACK)
 
