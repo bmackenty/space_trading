@@ -78,8 +78,9 @@ class Player:
         print(f"Player: {self.name}")
         print(f"Money: {self.money}")
         print(f"Health: {self.health}")
-        # Add more stats as needed
+        print(f"Reputation: {self.reputation}")
 
+        
     def check_ship_cargo(self):
         if self.ship:
             self.ship.display_cargo()
