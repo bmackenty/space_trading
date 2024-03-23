@@ -6,19 +6,30 @@ from game import Game
 
 # Initialize Pygame
 pygame.init()
-game = Game()
+
 
 # Constants
 WIDTH, HEIGHT = 1024, 768
 BLACK, WHITE, GREY, GREEN = (0, 0, 0), (255, 255, 255), (192, 192, 192), (0, 255, 0)
 COLUMN_WIDTH, ROW_HEIGHT, BORDER_THICKNESS = 200, 100, 1
 HEADER_HEIGHT = 50  # Height of the header
-HEADER_TEXT = 'Space Trading Game'  # Text to display in the header
-LEFT_COLUMN_TEXT, RIGHT_COLUMN_TEXT, BOTTOM_ROW_TEXT, MIDDLE_SECTION_TEXT = 'Left Column', 'Right Column', 'Bottom Row', 'Middle Section'
+
+
 
 # Set up display
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Space Trading Game')
+
+# Initialize the game
+game = Game(screen)
+
+# text:
+HEADER_TEXT = game.header_text
+LEFT_COLUMN_TEXT = game.left_column_text
+RIGHT_COLUMN_TEXT = game.right_column_text
+BOTTOM_ROW_TEXT = game.bottom_row_text
+MIDDLE_SECTION_TEXT = game.middle_section_text
+
 
 # Set up the font
 try:
@@ -46,21 +57,6 @@ def draw_text(text, x, y):
     text_rect = text_surface.get_rect(center=(x, y))
     screen.blit(text_surface, text_rect)
 
-# Function to update text
-def update_text():
-    global LEFT_COLUMN_TEXT, RIGHT_COLUMN_TEXT, BOTTOM_ROW_TEXT, MIDDLE_SECTION_TEXT
-    # Example of dynamic text update
-    LEFT_COLUMN_TEXT = 'Updated Left Column'
-    RIGHT_COLUMN_TEXT = 'Updated Right Column'
-    BOTTOM_ROW_TEXT = 'Updated Bottom Row'
-    MIDDLE_SECTION_TEXT = 'Updated Middle Section'
-
-
- # Variables for timing text updates
-last_update_time = time.time()
-update_interval = 5  # update every 5 seconds
-
-
 # Function to draw header
 def draw_header():
     draw_bordered_box(0, 0, WIDTH, HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
@@ -78,11 +74,6 @@ while running:
     
     game.update()
 
-
-    # # Update text periodically
-    # if current_time - last_update_time > update_interval:
-    #     update_text()
-    #     last_update_time = current_time
 
     screen.fill(BLACK)
 
@@ -102,7 +93,5 @@ while running:
 
     pygame.display.flip()
 
-   
-
 pygame.quit()
-sys.exit()
+
