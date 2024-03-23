@@ -1,9 +1,12 @@
 import pygame
 import sys
 import time
+from game import Game 
+
 
 # Initialize Pygame
 pygame.init()
+game = Game()
 
 # Constants
 WIDTH, HEIGHT = 1024, 768
@@ -70,13 +73,16 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        else:
+            game.handle_event(event)  # Pass the event to the game for processing
+    
+    game.update()
 
 
-
-    # Update text periodically
-    if current_time - last_update_time > update_interval:
-        update_text()
-        last_update_time = current_time
+    # # Update text periodically
+    # if current_time - last_update_time > update_interval:
+    #     update_text()
+    #     last_update_time = current_time
 
     screen.fill(BLACK)
 
@@ -95,6 +101,8 @@ while running:
     draw_text(MIDDLE_SECTION_TEXT, WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
 
     pygame.display.flip()
+
+   
 
 pygame.quit()
 sys.exit()
