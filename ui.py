@@ -1,5 +1,4 @@
 import pygame
-import sys
 import time
 from game import Game 
 
@@ -13,8 +12,6 @@ WIDTH, HEIGHT = 1024, 768
 BLACK, WHITE, GREY, GREEN = (0, 0, 0), (255, 255, 255), (192, 192, 192), (0, 255, 0)
 COLUMN_WIDTH, ROW_HEIGHT, BORDER_THICKNESS = 200, 100, 1
 HEADER_HEIGHT = 50  # Height of the header
-
-
 
 # Set up display
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -62,6 +59,19 @@ def draw_header():
     draw_bordered_box(0, 0, WIDTH, HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
     draw_text(HEADER_TEXT, WIDTH // 2, HEADER_HEIGHT // 2)
 
+# function to draw column
+def draw_columns():
+    draw_bordered_box(0, HEADER_HEIGHT, COLUMN_WIDTH, HEIGHT - ROW_HEIGHT - HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS, draw_top_bottom=False)
+    draw_bordered_box(WIDTH - COLUMN_WIDTH, HEADER_HEIGHT, COLUMN_WIDTH, HEIGHT - ROW_HEIGHT - HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS, draw_top_bottom=False)
+    draw_bordered_box(0, HEIGHT - ROW_HEIGHT, WIDTH, ROW_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
+
+
+def write_text_to_display():
+    draw_text(LEFT_COLUMN_TEXT, COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+    draw_text(RIGHT_COLUMN_TEXT, WIDTH - COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+    draw_text(BOTTOM_ROW_TEXT, WIDTH // 2, HEIGHT - ROW_HEIGHT // 2)
+    draw_text(MIDDLE_SECTION_TEXT, WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+
 # Game loop
 running = True
 while running:
@@ -73,23 +83,12 @@ while running:
             game.handle_event(event)  # Pass the event to the game for processing
     
     game.update()
-
-
     screen.fill(BLACK)
 
-    # Draw header
+    # Draw ui
     draw_header()
-
-    # Draw columns and rows with adjusted borders
-    draw_bordered_box(0, HEADER_HEIGHT, COLUMN_WIDTH, HEIGHT - ROW_HEIGHT - HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS, draw_top_bottom=False)
-    draw_bordered_box(WIDTH - COLUMN_WIDTH, HEADER_HEIGHT, COLUMN_WIDTH, HEIGHT - ROW_HEIGHT - HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS, draw_top_bottom=False)
-    draw_bordered_box(0, HEIGHT - ROW_HEIGHT, WIDTH, ROW_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
-
-    # Draw text
-    draw_text(LEFT_COLUMN_TEXT, COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
-    draw_text(RIGHT_COLUMN_TEXT, WIDTH - COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
-    draw_text(BOTTOM_ROW_TEXT, WIDTH // 2, HEIGHT - ROW_HEIGHT // 2)
-    draw_text(MIDDLE_SECTION_TEXT, WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+    draw_columns()
+    write_text_to_display()
 
     pygame.display.flip()
 

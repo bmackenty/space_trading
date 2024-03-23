@@ -33,7 +33,5 @@ import player
 
 
 playerOne = player.player("Player One")
-print(playerOne.greet())
-playerOne.setup()
-print(playerOne.greet())
+
 
