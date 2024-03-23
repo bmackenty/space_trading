@@ -1,7 +1,7 @@
 # this creates a class for the player
 import datetime
 
-class Player_stats:
+class player:
     def __init__(self,name):
         self.name = name
         self.id = None 
@@ -13,6 +13,7 @@ class Player_stats:
         self.faction = None
         self.reputation = 0
         self.skills = {}
+        self.stats = {"strength":0,"dexterity":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0,"luck":0,"ether":0}
         self.missions = []
         self.location = None
         self.traveling = False
@@ -21,9 +22,14 @@ class Player_stats:
         self.race = None
         self.crew = []
         self.affiliations = []
-        
+        self.race = None
+        self._createDate = datetime.datetime.now()
+                
     def greet(self):
         print(f"Hello, {self.name}!")
         print(f"Your ID is {self.id}.")
         print(f"You have {self.money} credits.")
         print(f"You have {self.health} health.")
+        print(f"Stats: {self.stats}")
+        print(f"Create Date: {self._createDate}")
+
