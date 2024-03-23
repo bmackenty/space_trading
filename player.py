@@ -32,4 +32,9 @@ class player:
         print(f"You have {self.health} health.")
         print(f"Stats: {self.stats}")
         print(f"Create Date: {self._createDate}")
+    
+    # function for users setup (or create) their player
+    def setup(self):
+        self.name = input("What is your name? ")
 
+     
