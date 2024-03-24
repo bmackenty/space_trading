@@ -54,6 +54,26 @@ def draw_text(text, x, y):
     text_rect = text_surface.get_rect(center=(x, y))
     screen.blit(text_surface, text_rect)
 
+
+def draw_multiline_text(surface, text, pos):
+    """
+    Draws multi-line text on the given surface.
+    
+    Parameters:
+    - surface: Pygame surface to draw text on.
+    - text: The multi-line text string to be drawn.
+    - pos: A tuple (x, y) representing the top-left corner from where text rendering will start.
+    """
+    lines = text.split('\n')
+    x, y = pos
+    for line in lines:
+        text_surface = font.render(line, True, WHITE)
+        text_rect = text_surface.get_rect(center=(x, y))
+        surface.blit(text_surface, text_rect)
+        # Move to the next line by adjusting the y-coordinate; adjust the value for different spacing
+        y += font.get_linesize()  # or use a fixed value like font.get_height() + 2
+
+
 # Function to draw header
 def draw_header():
     draw_bordered_box(0, 0, WIDTH, HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
@@ -65,9 +85,9 @@ def draw_columns():
     draw_bordered_box(WIDTH - COLUMN_WIDTH, HEADER_HEIGHT, COLUMN_WIDTH, HEIGHT - ROW_HEIGHT - HEADER_HEIGHT, GREEN, BLACK, BORDER_THICKNESS, draw_top_bottom=False)
     draw_bordered_box(0, HEIGHT - ROW_HEIGHT, WIDTH, ROW_HEIGHT, GREEN, BLACK, BORDER_THICKNESS)
 
-
 def write_text_to_display():
-    draw_text(LEFT_COLUMN_TEXT, COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+    # draw_text(LEFT_COLUMN_TEXT, COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
+    draw_multiline_text(screen, LEFT_COLUMN_TEXT, (COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2))
     draw_text(RIGHT_COLUMN_TEXT, WIDTH - COLUMN_WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
     draw_text(BOTTOM_ROW_TEXT, WIDTH // 2, HEIGHT - ROW_HEIGHT // 2)
     draw_text(MIDDLE_SECTION_TEXT, WIDTH // 2, HEADER_HEIGHT + (HEIGHT - ROW_HEIGHT - HEADER_HEIGHT) // 2)
