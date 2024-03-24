@@ -30,7 +30,7 @@ MIDDLE_SECTION_TEXT = game.middle_section_text
 
 # Set up the font
 try:
-    font = pygame.font.Font(None, 14)
+    font = pygame.font.Font(None, 18)
 except IOError:
     print("Font not found! Using default font.")
     font = pygame.font.SysFont(None, 24)

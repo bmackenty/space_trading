@@ -44,7 +44,8 @@ class Game:
         #initial text
         self.header_text = "Space Trading Game!!"
         # provide player information below: 
-        self.left_column_text = "Line 1\n Line2\nline 3"
+        player_information = playerOne.greet()
+        self.left_column_text = player_information
         self.right_column_text = "mission / cargo / ship information"
         self.bottom_row_text = "game status, turn, etc.."
         self.middle_section_text = "market / planet / station information"
