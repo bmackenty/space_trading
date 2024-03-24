@@ -1,7 +1,7 @@
 import pygame
 import time
 from game import Game 
-
+from ui_character_sheet import draw_character_sheet
 
 # Initialize Pygame
 pygame.init()

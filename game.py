@@ -40,6 +40,7 @@ class Game:
         self.some_state = "Initial State"
         self.screen = screen
         playerOne = player.player("Player One")
+        
 
         #initial text
         self.header_text = "Space Trading Game!!"
@@ -60,7 +61,10 @@ class Game:
             # Handle key press
             if event.key == pygame.K_SPACE:
                 self.some_state = "Spacebar pressed"
-                print(self.some_state)
+            elif event.key == pygame.K_s:
+                # show_character_sheet = not show_character_sheet  # Toggle the display of the character sheet
+                self.some_state = "S key pressed"
+            print(self.some_state)
         
 
     def update(self):
