@@ -32,7 +32,7 @@ class player:
         # print(f"You have {self.health} health.")
         # print(f"Stats: {self.stats}")
         # print(f"Create Date: {self._createDate}")
-        return f"Hello, {self.name}! \nYour ID is {self.id}.\n You have {self.money} credits. You have {self.health} health. Create Date: {self._createDate}"
+        return f"Hello, {self.name}! \nYour ID is {self.id}.\n You have {self.money} credits. You have {self.health} health."
     
     # function for users setup (or create) their player
     def setup(self):

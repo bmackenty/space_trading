@@ -1,7 +1,7 @@
 import pygame
 import time
 from game import Game 
-from ui_character_sheet import draw_character_sheet
+
 
 # Initialize Pygame
 pygame.init()
@@ -109,6 +109,9 @@ while running:
     draw_header()
     draw_columns()
     write_text_to_display()
+
+    if game.show_character_sheet:
+        game.draw_character_sheet()
 
     pygame.display.flip()
 
